@@ -9,36 +9,49 @@
 % https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\raisedrule}[2][0em]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
 \documentclass[]{twentysecondcv}
+\makeatletter
+\def\@sectioncolor{\color{violettoFrankCV}}
+\makeatother
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%
 %% PROFILE SIDE BAR %%
 %%%%%%%%%%%%%%%%%%%%%%
 % personal info
-\profilepic{alice.jpeg}          % path of profile pic
-\cvname{Alice}                   % your name
-\cvjobtitle{Adventurer}          % your actual job position
-\cvdate{26 November 1865}        % date of birth
-\cvaddress{United Kingdom}       % address
-\cvnumberphone{+39 0325658974}   % telephone number
-\cvmail{alice@wonderland.com}    % e-mail
-\cvsite{http://en.wikipedia.org} % personal site
+\profilepic{FototesseraCVnew.JPEG}          % path of profile pic
+%\profilepic{Alice.jpeg}
+\cvname{Matteo\\ Di Fabio}                   % your name
+\cvjobtitle{Software Engineer}          % your actual job position
+\cvdate{8 April 1995}        % date of birth
+\cvaddress{Turin, Italy}       % address
+\cvnumberphone{+39 3277834888}   % telephone number
+\cvmail{mtt.difabio@gmail.com}    % e-mail
+%\cvsite{http://en.wikipedia.org} % personal site
+\cvgit{Frequel}
+\cvlinkedin{/in/matteo-di-fabio/}
+%\cvlinkedin{\href{https://www.linkedin.com/in/matteo-di-fabio/}{/in/matteo-di-fabio/}.
 
-\aboutme{
-
-Alice is a sensible prepubescent girl from a wealthy English family who finds herself in a strange world ruled by imagination and fantasy. Alice feels comfortable with her identity and has a strong sense that her environment is comprised of clear, logical, and consistent rules and features. Alice's familiarity with the world has led one critic to describe her as a "disembodied intellect". Alice displays great curiosity and attempts to fit her diverse experiences into a clear understanding of the world.
-} % About me section
+%\aboutme{
+%\noindent
+%Young professional with a major interest in technology, music, video games, sports and travels, currently studying software engineering is looking for the right opportunity to show both his skills and enthusiasm. Quick learner, fast thinker, creative talented, great team worker and effective problem solver with a remarkable sense of adaption. Experiences abroad enable a wider sense of perspective over issues which lead to strong organizational capabilities and result-driven attitude. Known for honesty, integrity and taking ethical obligations quite seriously. Time flexibility will ensure that organizational needs are met.
+%} % About me section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% Skill bar section, each skill must have a value between 0 an 6 (float) %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\skills{{pursuer of rabbits/5},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+%\skills{{pursuer of rabbits/5},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Language bar section, each skill must have a value between 0 an 6 (float) %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\languages{{Italian/5},{English/4},{Portuguese/2.5},{Spanish/1.2}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%Skill text section, each skill must have a value between 0 an 6%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\skillstext{{lovely/4},{narcissistic/3}}
+%\skillstext{{lovely/4},{narcissistic/3}}
 
 \makeprofile
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,93 +61,373 @@ Alice is a sensible prepubescent girl from a wealthy English family who finds he
 %%%%%%%%%%%%%%%%%%
 %%%%%% BODY %%%%%%
 %%%%%%%%%%%%%%%%%%
+\vspace{-5pt}
 % Simple Section
-\section{interests}
-The heroine and the dreamer of Wonderland;  Alice is the principal character.
+\section{\round{About me}{green} \raisedrule[0\baselineskip]{1pt}\circled{}}
+\vspace{-10pt}
+Young professional with a keen interest in technology, music, video games, sports and travel. Develops from early on a strong interest in technology that led him to undertake the course of studies in Software Engineer at the Polytechnic of Turin, during which he did two internships in which he began to understand the world of work of Software Developers. Driven by his strong interest in IT and technology at the end of his studies, he decided to pursue the Cybersecurity Engineer career path. Currently working in the automotive world, he wants to explore other fields and is looking for the right opportunity to show both his skills and enthusiasm. Quick learner, fast thinker, creative talented, great team worker and effective problem solver with a remarkable sense of adaption. Experiences abroad enable a wider sense of perspective over issues which lead to strong organizational capabilities and result-driven attitude. Known for honesty, integrity and taking ethical obligations quite seriously. Time flexibility will ensure that organizational needs are met.
+%\section{interests}
+%The heroine and the dreamer of Wonderland;  Alice is the principal character.
+\section{\round{Experience}{yellow}\raisedrule[0\baselineskip]{1pt}\circled{}} 
+\vspace{-10pt}
+\begin{twenty}
+	\twentyitem
+	{since May 2023}
+%	{DriveSec}
+	{\href{https://www.drivesec.com/}{DriveSec}}
+	{Torino – Italy}
+	{Software Engineer. Design and developing of WeSeTh framework:
+		\begin{itemize}		
+%			\item Develop and enhance Weseth, focusing on automating remote IoT penetration testing processes.
+%			\item Collaborate with a team of skilled colleagues to design and implement software solutions, ensuring high standards of code quality and system performance.
+%			\item Make strategic software design decisions, contributing to the overall architecture and development roadmap.
+%			\item Utilize AWS technologies to deploy and manage cloud services, enhancing the scalability and reliability of our infrastructure.
+%			\item Employ Bitbucket for version control and continuous integration, ensuring seamless and efficient development workflows.
+			\item Developing Weseth, an infrastructure for automating remote IoT penetration tests using TypeScript, Rust, Go, and Docker. \item Implement cloud services with AWS and manage version control with Bitbucket. 
+			\item Focus on creating scalable, efficient solutions to enhance IoT security testing.
+		\end{itemize}
+	}
+	\twentyitem
+	{Mar 2022 - May 2023}
+	{\href{https://www.fptindustrial.com/}{FPT Industrial}}
+	{Torino – Italy}
+	{Cybersecurity Engineer. Design of eAxle TCU Cybersecurity:
+		\begin{itemize}		
+%			\item Perform, support and/or manage the execution of cyber security tasks
+%			\item Support interaction with customers for the definition of the cyber security goals
+%			\item Support interaction with supplier for the specification of cyber security requirements implementation
+%			\item Support internal design activities for system and component specifications and verification, in particular Firmware and \item Software development team
+%			\item Support product development as member of cross functional team, in particular with strong collaboration with functional safety and FMEA team.
+			\item Facilitate interactions with customers and suppliers to define and implement cyber security goals and requirements, support internal design and verification activities and collaborate with cross-functional teams, including functional safety and FMEA teams, throughout product development.
+			\item Review deliverables and workproducts to assure FPT Industrial requirements are supported
+			\item Coach engineering teams on cyber security topics and best practices
+			\item Actively participate in cybersecurity workgroups, as assigned, to support development or improvement in processes.
+		\end{itemize}
+	}
+	\twentyitem
+	{Feb 2022 - May 2023}
+	{\href{https://mca-groupe.com/}{MCA Engineering}}
+	{Torino – Italy}
+	{Software Engineer consultant.}
+	\twentyitem
+	{Jun 2021 - Mar 2022}
+	{Marshmallow Games {\scriptsize(Internship)}}
+	{Bari – Italy}
+	{Development of open-ended dynamics with the aim of creating an interaction system between game objects for the creation of applied games that aim at STEM education for children.
+		\begin{itemize}		
+			\item Unity 3D + C\#,  Unity Canvas, Unity 2D
+			\item  Drag \& Drop design%:  Drag \& Drop Camera, Drag \& Drop, Position calculation on drop and collision detection
+			\item Interaction system between objects%: collision detection, management of interactions between two colliding objects, feedback animations
+			\item Playable Demo Game
+		\end{itemize}
+	}
+	\twentyitem
+	{Oct 2017 - Mar 2018}
+	{\href{https://ubiatar.com/}{Ubiatar {\scriptsize(Internship)}}}
+	{Torino – Italy}
+	{Developing feature for the Android Ubiatar app using react native and FFmpeg framework and javascript programming language.
+	\begin{itemize}		
+		\item  Research and application for a double connection via android smartphone (Wi-Fi -> GoPro, Data-> Internet)
+		\item Management of the app notification system (front end - JS+React Native)
+	\end{itemize}
+	}
 
-\section{education}
+\end{twenty}
+
+\vspace{-40pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% GDPR %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\blfootnote{I declare that I read the privacy statement on the processing of my personal data and my rights within the meaning of the General Data Protection Regulation (EU Regulation 2016/679) and Legislative decree no.196 of 30th June 2003 (Code regarding the protection of personal data). I hereby give my consent to the processing of my personal data included in my CV.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+\newpage % Start a new page
+\makeprofilesecondpage % Print the sidebar
+%\skills{{pursuer of rabbits/5},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+\vspace{-5pt}
+
+\section{\round{Education}{green}\raisedrule[0\baselineskip]{1pt}\circled{}}
+\vspace{-10pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%% TWENTY LIST ITEMS %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    Four arguments: date; title; where; description %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{twenty}
   \twentyitem
-    {since 1865}
-    {Ph.D. {\normalfont candidate in Computer Science}}
-    {Wonderland}
-    {\emph{A Quantified Theory of Social Cohesion.}}
+    {2018 - 2022}
+    {Master’s Degree in Software Engineering}
+    {108/110}
+    {Politecnico di Torino - Italy}
   \twentyitem
-    {1863-1865}
-    {M.Sc. magna cum laude}
-    {Wonderland}
-    {Majoring in Computer Science}
+    {2020 - 2021}
+    {International extra UE program}
+    { }
+    {UNICAMP - University of Campinas - Brazil}
   \twentyitem
-    {1861-1863}
-    {B.Sc. magna cum laude}
-    {Wonderland}
-    {Majoring in Computer Science}
+    {2014-2018}
+    {Bachelor’s Degree in Computer Engineering}
+    { }
+    {Politecnico di Torino - Italy}
   \twentyitem
-    {1856-1861}
-    {High school}
-    {Wonderland}
-    {Specializing in mathematics and physics.}
+    {2009-2014}
+    {High School Diploma P.N.I.}
+    { }
+    {Liceo Scientifico Leonardo Da Vinci Pescara - Italy}
 \end{twenty}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%TWENTY LIST SHORTITEMS %%%%%%%%%%%%%
 %%% Two arguments: date; title/description %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{publications}
-\begin{twentyshort}
-  \twentyitemshort
-    {1865}
-    {Chapter One, Down the Rabbit Hole.}
-  \twentyitemshort
-    {1865}
-    {Chapter Two, The Pool of Tears.}
-  \twentyitemshort
-    {1865}
-    {Chapter Three,  The Caucus Race and a Long Tale.}
-  \twentyitemshort
-    {1865}
-    {Chapter Four,  The Rabbit Sends a Little Bill.}
-  \twentyitemshort
-    {1865}
-    {Chapter Five,  Advice from a Caterpillar.}
-\end{twentyshort}
+%\section{publications}
+%\begin{twentyshort}
+%  \twentyitemshort
+%    {1865}
+%    {Chapter One, Down the Rabbit Hole.}
+%  \twentyitemshort
+%    {1865}
+%    {Chapter Two, The Pool of Tears.}
+%  \twentyitemshort
+%    {1865}
+%    {Chapter Three,  The Caucus Race and a Long Tale.}
+%  \twentyitemshort
+%    {1865}
+%    {Chapter Four,  The Rabbit Sends a Little Bill.}
+%  \twentyitemshort
+%    {1865}
+%    {Chapter Five,  Advice from a Caterpillar.}
+%\end{twentyshort}
+%
+%\section{awards}
+%\begin{twentyshort}
+%  \twentyitemshort
+%    {1987}
+%    {All-Time Best Fantasy Novel.}
+%  \twentyitemshort
+%    {1998}
+%    {All-Time Best Fantasy Novel before 1990.}
+%\end{twentyshort}
+%
+%\section{other information}
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a “poky little house,” and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+\section{\round{Computer Skills}{yellow} \raisedrule[0\baselineskip]{1pt}\circled{}} %\rule[0.15\baselineskip]{3.2cm}{1pt}
+\vspace{-10pt}
+\color{headercolor}
+%\subsection{Operating System}
+%\skills{{Windows/5}}
+%\givenskill
+%\giventextskill
+%\skills{{GNU+Linux (Debian\&Ubuntu Distros)/5}}
+%\givenskill
+%\giventextskill
+%Windows, GNU+Linux (Ubuntu Distro).
+%\subsection{Query Languages}
+%\skills{{SQL/5}}
+%\givenskill
+%\giventextskill
+%\skills{{Open Cypher/3.75}}
+%\givenskill
+%\giventextskill
+\subsection{}
+\begin{minipage}[t]{0.48\textwidth}
+	\subsection{Operating System}
+	\skills{{Windows/5},{GNU+Linux (Debian\&Ubuntu Distros)/5}}
+	\givenskill
+	\giventextskill
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\subsection{Query Languages}
+	\skills{{SQL/3.5},{Open Cypher/3.75}}
+	\givenskill
+	\giventextskill
+\end{minipage}
+% Add vertical space between the pairs of minipages
+%\vspace{1em} % Adjust the length as needed
+%
+%\subsection{Programming Language}
+%%\skills{{C/5},{C++/2.5},{C\#/3.7},{Java/2.3},{ARM Assembly (Cortex-M3)/4.2},{PHP/2.3}}
+%%\givenskill
+%%\giventextskill
+%%\skills{{SQL/5},{Python/3},{Bash/4.5},{8086 Assembly/1.7},{Javascript/1.5},{Arduino/2.6}}
+%%\givenskill
+%%\giventextskill
+%\skills{{C/4.5},{C++/1.75},{C\#/2},{Python/4}}
+%\givenskill
+%\giventextskill
+%\skills{{Rust/2.6},{Bash/4.3},{TypeScript/1}}
+%\givenskill
+%\giventextskill
+%\subsection{Cloud Services}
+%\subsubsection{AWS}
+%\skills{{EC2/4},{S3/4}, {Lambda/2},{DynamoDB/1}}
+%\givenskill
+%\giventextskill
+%\skills{{IoT Core/3.65},{Neptune/3.45},{ECR/2.75}}
+%\givenskill
+%\giventextskill
+\subsection{}
+\begin{minipage}[t]{0.48\textwidth}
+	\subsection{Programming Language}
+	\skills{{C/4.5},{C++/1.75},{C\#/2},{Python/4},{Rust/2.6},{Bash/4.3},{TypeScript/1}}
+	\givenskill
+	\giventextskill
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\subsection{Cloud Services}
+	\skills{{AWS EC2/4},{AWS S3/4}, {AWS Lambda/2},{AWS IoT Core/3.65},{AWS Neptune/3.45},{AWS ECR/2.75},{AWS DynamoDB/1}}
+	\givenskill
+	\giventextskill
+\end{minipage}
 
-\section{awards}
-\begin{twentyshort}
-  \twentyitemshort
-    {1987}
-    {All-Time Best Fantasy Novel.}
-  \twentyitemshort
-    {1998}
-    {All-Time Best Fantasy Novel before 1990.}
-\end{twentyshort}
+%
+%\subsection{Programs / Softwares}
+%\skills{{GIT/4.15},{Code::Blocks, Eclipse, Visual Studio Code/3.7},{Visual Studio 2019\&2022/4.1},{OBS Studio/3.85}}
+%\givenskill
+%\giventextskill
+%\skills{{Libre Office Suite, Microsoft Office Suite/5},{Cup Parser, JFlex scanner/3},{Matlab/1},{Unity3D/3.2}}
+%\givenskill
+%\giventextskill
+%
+\subsection{DevOps \& Tools}
+\vspace{-10pt}
+\skills{{GIT/4.15},{Docker/3.85},{Bitbucket (Pipeline and Git)/3.6}}
+\givenskill
+\giventextskill
+\skills{{Libre Office Suite, Microsoft Office Suite/5},{Visual Studio Code/4.3},{Visual Studio 2019\&2022/2}}
+\givenskill
+\giventextskill
+%%%%%%%%%%%%%%%
+%\subsection{API / Frameworks}
+%%\skills{{OpenGL/1.8},{GLSL/0.75},{FFmpeg/1.6}}
+%%\givenskill
+%%\giventextskill
+%%\skills{{WINAPI32/2},{LinuxAPI/3.3},{React Native/0.9}}
+%%\givenskill
+%%\giventextskill
+%\skills{{MQTT/3.5},{Node.js/1.75}}
+%\givenskill
+%\giventextskill
+%\skills{{TypeORM/1.5}}
+%\givenskill
+%\giventextskill
+%\subsection{Others}
+%%\skills{{ECDL Full Standard/5}}
+%%\givenskill
+%%\giventextskill
+%%\skills{{PC Hardware assembly and configuration skills/5}}
+%%\givenskill
+%%\giventextskill
+%\vspace{-10pt}
+%ECDL Full Standard, PC Hardware assembly and configuration skills.
+%\color{black}
+%\vspace{-10pt}
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{}
+\begin{minipage}[t]{0.48\textwidth}
+	\subsection{APIs \& Frameworks}
+	\skills{{MQTT/3.5},{Node.js/1.75},{TypeORM/1.5}}
+	\givenskill
+	\giventextskill
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\subsection{Others}
+	ECDL Full Standard, PC Hardware assembly and configuration skills.
+	\vspace{10pt}
+	\subsection{Previous Experience}
+	Java, PHP, 8086 Assembly, Arduino, Cup Parser, JFlex scanner, ARM Assembly (Cortex-M3), JavaScript, Code::Blocks, Eclipse, OBS Studio, Matlab, Unity3D, OpenGL, GLSL, FFmpeg, WINAPI32, LinuxAPI, React Native
+\end{minipage}
+\color{black}
+\vspace{-10pt}   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% GDPR %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{experience}
-\begin{twenty}
-  \twentyitem
-    {1900}
-    {Alice in Wonderland-The Circra (1900's) Silent Film.}
-    {Film}
-    {The first Alice on film was over a hundred years ago.}
-  \twentyitem
-    {1933}
-    {Alice in Wonderland 1933 version.}
-    {Film}
-    {This film stars Ethel griffies and Charlotte Henry. It was a box office flop when it was released.}
-\twentyitem
-    {1951}
-    {Disney Film.}
-    {Film}
-    {Walt Disney brings Lewis Carroll's fantasy story to life in this well done animated classic. Even though many elements from the book were dropped, such as the duchess with the baby pig and mock turtle, this version is without a doubt the most famous Alice adaption made.}
+\blfootnote{I declare that I read the privacy statement on the processing of my personal data and my rights within the meaning of the General Data Protection Regulation (EU Regulation 2016/679) and Legislative decree no.196 of 30th June 2003 (Code regarding the protection of personal data). I hereby give my consent to the processing of my personal data included in my CV.}
 
-\end{twenty}
-\section{other information}
-Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a “poky little house,” and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+\newpage % Start a new page
+\makeprofilenewpage % Print the sidebar
+%\skills{{pursuer of rabbits/5},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+\vspace{-5pt}
+\section{\round{University Projects}{green}\raisedrule[0\baselineskip]{1pt}\circled{}}
+\vspace{-15pt}
+\subsection{@ UNICAMP University of Campinas - Brazil}
+Snake RL - 2021
+\begin{itemize}
+	\item Teamwork
+	\item Reinforcement Learning Agent playing the game “Snake” with different approach (Monte-Carlo, Sarsa, Q-learning, DQN, A2C) - \href{https://github.com/Frequel/SnakeRL}{\textcolor{cerulean}{link}}
+\end{itemize}
+
+Affective Computing article on medium - 2020
+\begin{itemize}
+	\item Writing an article on affective computing to be published in a medium
+	\item Should we replicate the human mind? - \href{https://medium.com/emotionai/should-we-replicate-the-human-mind-a6daa018be36}{\textcolor{cerulean}{link}}
+\end{itemize}
+
+Cyber Security Experiments - 2020
+\begin{itemize}
+	\item Cyber Security assignment that requested to practice with MITM, Brute force, HTTP Dissector, Data Injection and others kind of cyber-attack developed in C and Python. - \href{https://github.com/Frequel/Cyber-Security-Unicamp-SEGC2020s2}{\textcolor{cerulean}{link}}
+\end{itemize}
+
+Detection, tracking and location of runways on visual approaches - 2020
+\begin{itemize}
+	\item Teamwork
+	\item Given a picture of a flight landing approach, identifies and isolates the runway in question and detect the airplane position from it. - \href{https://github.com/Frequel/projetoea979}{\textcolor{cerulean}{link}}
+\end{itemize}
+\subsection{@ Politecnico di Torino - Italy}
+Handicap lift platform - 2020
+\begin{itemize}
+	\item Program for the LandTiger Board that permits to reproduce the behaviour of the elevator using C and ARM Assembly -  \href{https://github.com/Frequel/Strairlift-Controller-LPC1768-LANDTIGER-board-Cortex-M3}{\textcolor{cerulean}{link}}
+\end{itemize}
+
+LaTazza - 2019
+\begin{itemize}
+	\item Teamwork
+	\item LaTazza is a desktop application that helps employees in a work environment to manage the sale and the supply of coffee and other beverages capsules. - \href{https://github.com/Frequel/LaTazza}{\textcolor{cerulean}{link}}
+\end{itemize}
+
+Flight ticket booking website - 2019
+\begin{itemize}
+	\item Website to manage the booking system of a flight using HTLM, CSS, JavaScript, PHP and SQL. It includes the developing of the database, login and registration system and the web interface. - \href{https://github.com/Frequel/Airplane-reservation-managment-website}{\textcolor{cerulean}{link}}
+\end{itemize}
+
+Wine Company - Information system analysis - 2018
+\begin{itemize}
+	\item Teamwork
+	\item Information system project where we modeled the Business/Information system brought introducing IoT resources in a wine company.
+\end{itemize}
+
+\section{\round{Personal Projects}{green}\raisedrule[0\baselineskip]{1pt}\circled{}}
+Wake On Lan Bridge
+\begin{itemize}
+%	\item Teamwork
+	\item Create a bridge using an ESP32 (or ESP8266) that can send Wake-on-LAN (WOL) magic packets to specific devices on your local network. The bridge can be controlled using Alexa voice commands or a Telegram bot, enabling you to remotely wake your computers or other devices.  - \href{https://github.com/Frequel/WOL_bridge}{\textcolor{cerulean}{link}}
+\end{itemize}
+LaTeX CV
+\begin{itemize}
+	%	\item Teamwork
+	\item My personal fork of a project to build a CV using LaTeX - \href{https://github.com/Frequel/TwentySecondsCurriculumVitae-LaTex}{\textcolor{cerulean}{link}}
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% GDPR %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\blfootnote{I declare that I read the privacy statement on the processing of my personal data and my rights within the meaning of the General Data Protection Regulation (EU Regulation 2016/679) and Legislative decree no.196 of 30th June 2003 (Code regarding the protection of personal data). I hereby give my consent to the processing of my personal data included in my CV.}
 %%%%%%%%%%%%%%%%%%%%
 %%%%% ENDBODY %%%%%%
 %%%%%%%%%%%%%%%%%%%%
